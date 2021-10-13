@@ -1,0 +1,154 @@
+// COLORS
+$color-primary: #19a2ae;
+$color-primary-dark: #2d3248;
+$color-primary-light: #6a6f81;
+
+$color-grey-dark: #969696;
+$color-grey-light: #ddd;
+
+// GENERAL SETTINGS
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/********************/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to top right,
+    rgba($color-primary, 1),
+    rgba($color-primary, 1)
+  );
+  position: relative;
+  z-index: 0;
+}
+
+.img__top {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: -65rem;
+  left: -3.5rem;
+}
+
+.img__bottom {
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: -50rem;
+  right: 0rem;
+}
+
+.card {
+  width: 35rem;
+  margin: 25rem auto;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.2);
+  z-index: 10;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    border-bottom: 1px solid $color-grey-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--profile-img {
+      box-sizing: content-box;
+      width: 9.6rem;
+      height: 9.6rem;
+      display: block;
+      border-radius: 50%;
+      border: 0.5rem solid #fff;
+      margin-bottom: -4rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-primary-dark;
+    padding: 0.5rem 0;
+
+    span {
+      margin-left: 0.5rem;
+      font-weight: 400;
+      color: $color-primary-light;
+    }
+  }
+
+  &__city {
+    font-size: 1.4rem;
+    color: $color-primary-light;
+    padding-bottom: 2rem;
+  }
+
+  &__numbers {
+    padding: 2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &-cell {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .numbers {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-primary-dark;
+      }
+
+      .words {
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        color: $color-grey-dark;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+
+    & > * {
+      color: $color-primary-dark;
+    }
+  }
+}
