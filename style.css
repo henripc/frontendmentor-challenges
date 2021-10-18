@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Hahmlet', serif;
+  font-family: "Hahmlet", serif;
   line-height: 1.6;
   background-color: #343a40;
 }
@@ -23,5 +23,38 @@ body {
   color: #e9ecef;
 
   width: max-content;
-  margin: 40rem auto;
+  margin: 40rem auto 10rem auto;
+}
+
+.container {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.paragraph-solutions {
+  font-size: 1.8rem;
+  color: #e9ecef;
+}
+
+.paragraph-solutions a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+.paragraph-solutions a::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e9ecef;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.paragraph-solutions a:hover::after {
+  transform: scaleX(1);
 }
