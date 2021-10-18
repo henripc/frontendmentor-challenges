@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Hahmlet', serif;
+  line-height: 1.6;
+  background-color: #343a40;
+}
+
+.heading-1 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #e9ecef;
+
+  width: max-content;
+  margin: 40rem auto;
+}
