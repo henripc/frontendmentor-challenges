@@ -37,6 +37,7 @@ body {
 }
 
 .paragraph-solutions a {
+  display: inline-block;
   font-size: inherit;
   color: inherit;
   text-decoration: none;
