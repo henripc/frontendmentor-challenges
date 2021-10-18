@@ -27,6 +27,10 @@ $bp-small: 28.125em; // 450px;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 56.25%;
+  }
 }
 
 body {
@@ -60,6 +64,11 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 25rem;
+    margin-bottom: 15rem;
+  }
 
   &__main {
     border-bottom: 1px solid $color-grey-light;
