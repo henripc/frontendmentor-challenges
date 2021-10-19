@@ -25,7 +25,7 @@ html {
   font-size: 62.5%; // 1rem = 10px
 
   @media only screen and (max-width: $bp-small) {
-    font-size: 56.25%;
+    font-size: 56.25%;  // 1rem = 9px;
   }
 }
 
@@ -33,11 +33,20 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(
-    to top right,
-    rgba($color-primary, 1),
-    rgba($color-primary, 1)
-  );
+  background-image: url(./img/bg-pattern-top.svg),
+    url(./img/bg-pattern-bottom.svg),
+    linear-gradient(
+      to top right,
+      rgba($color-primary, 1),
+      rgba($color-primary, 1)
+    );
+  background-size: 100rem, 100rem, cover;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: right 51.5vw bottom 37vh, left 48vw top 51vh, center;
+
+  @media only screen and (max-width: $bp-small) {
+    background-position: right 38vw bottom 40vh, left 32vw top 44vh, center;
+  }
 }
 
 .container {
@@ -138,33 +147,34 @@ body {
 
   display: flex;
   justify-content: center;
-  
-  p {
+
+  &-paragraph {
     font-size: 1.2rem;
     color: #fff;
     letter-spacing: 0.5px;
+  }
 
-    a {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-      color: inherit; 
+  &__challenge-link,
+  &__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 2rem;
-        left: 0;
-        height: 1px;
-        width: 100%;
-        background-color: #fff;
-        transform: scaleX(0);
-        transition: transform 0.3s;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
 
-      &:hover::after {
-        transform: scaleX(1);
-      }
+    &:hover::after {
+      transform: scaleX(1);
     }
   }
 }

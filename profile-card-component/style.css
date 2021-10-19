@@ -17,7 +17,13 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(to top right, #19a2ae, #19a2ae); }
+  background-image: url(./img/bg-pattern-top.svg), url(./img/bg-pattern-bottom.svg), linear-gradient(to top right, #19a2ae, #19a2ae);
+  background-size: 100rem, 100rem, cover;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: right 51.5vw bottom 37vh, left 48vw top 51vh, center; }
+  @media only screen and (max-width: 28.125em) {
+    body {
+      background-position: right 38vw bottom 40vh, left 32vw top 44vh, center; } }
 
 .container {
   display: flex;
@@ -92,24 +98,24 @@ body {
   z-index: 10;
   display: flex;
   justify-content: center; }
-  .attribution p {
+  .attribution-paragraph {
     font-size: 1.2rem;
     color: #fff;
     letter-spacing: 0.5px; }
-    .attribution p a {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-      color: inherit; }
-      .attribution p a::after {
-        content: "";
-        position: absolute;
-        top: 2rem;
-        left: 0;
-        height: 1px;
-        width: 100%;
-        background-color: #fff;
-        transform: scaleX(0);
-        transition: transform 0.3s; }
-      .attribution p a:hover::after {
-        transform: scaleX(1); }
+  .attribution__challenge-link, .attribution__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; }
+    .attribution__challenge-link::after, .attribution__coder-link::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .attribution__challenge-link:hover::after, .attribution__coder-link:hover::after {
+      transform: scaleX(1); }
