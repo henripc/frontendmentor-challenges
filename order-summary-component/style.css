@@ -20,19 +20,26 @@ body {
   justify-content: center; }
 
 .container {
-  width: 144rem;
-  height: 84rem;
+  width: 100%;
+  height: 100vh;
   background-color: #e0e8ff;
-  margin-top: 5rem;
   background-image: url(./img/pattern-background-desktop.svg);
-  background-size: 144rem;
+  background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
+  gap: 5rem;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      background-image: url(./img/pattern-background-mobile.svg);
+      background-size: 100%;
+      background-repeat: no-repeat; } }
 
 .card {
   width: 45rem;
+  margin-top: 5rem;
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -40,11 +47,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 33.75em) {
+    .card {
+      width: 40em; } }
+  @media only screen and (max-width: 28.125em) {
+    .card {
+      width: 90vw; } }
+  .card__img {
+    width: 100%; }
   .card__details {
     width: 80%;
     margin: 4rem 0;
     display: flex;
     flex-direction: column; }
+    @media only screen and (max-width: 33.75em) {
+      .card__details {
+        margin: 2em 0 2.5em 0; } }
+    @media only screen and (max-width: 28.125em) {
+      .card__details {
+        width: 85%; } }
     .card__details .name {
       font-size: 2.8rem;
       font-weight: 900;
@@ -58,6 +79,9 @@ body {
       color: #7280a7;
       align-self: center;
       margin-top: 1.3rem; }
+      @media only screen and (max-width: 28.125em) {
+        .card__details .description {
+          width: 90%; } }
     .card__details .plan {
       background-color: #f5f7ff;
       border-radius: 1rem;
@@ -91,6 +115,7 @@ body {
       font-family: "Red Hat Display", sans-serif;
       font-size: 1.6rem;
       font-weight: 700;
+      letter-spacing: 0.5px;
       cursor: pointer;
       border: none;
       border-radius: 1rem;
@@ -105,9 +130,12 @@ body {
       font-size: 1.6rem;
       font-weight: 900;
       color: #7280a7;
-      margin-top: 3.5rem;
+      margin-top: 3rem;
       align-self: center;
       transition: color 0.3s; }
+      @media only screen and (max-width: 28.125em) {
+        .card__details .cancel-button:link {
+          margin-top: 1.5em; } }
     .card__details .cancel-button:hover {
       color: #1f2f56; }
 
