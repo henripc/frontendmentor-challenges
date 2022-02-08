@@ -94,7 +94,7 @@ body {
       .card__details .plan--price {
         display: flex;
         flex-direction: column; }
-        .card__details .plan--price h3 {
+        .card__details .plan--price h2 {
           color: #1f2f56;
           font-size: 1.6rem; }
         .card__details .plan--price p {
