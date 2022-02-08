@@ -1,0 +1,197 @@
+// COLORS
+$color-primary-pale: #e0e8ff;
+$color-primary-bright: #3829e0;
+$color-primary-dark: #766cf1;
+
+$color-neutral-pale: #f5f7ff;
+$color-neutral-desaturated: #7280a7;
+$color-neutral-dark: #1f2f56;
+
+// GENERAL SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/********************/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 144rem;
+  height: 84rem;
+  background-color: $color-primary-pale;
+  margin-top: 5rem;
+  background-image: url(./img/pattern-background-desktop.svg);
+  background-size: 144rem; 
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 45rem;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3rem 3rem rgba($color: $color-neutral-desaturated, $alpha: 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__details {
+    width: 80%;
+    margin: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: $color-neutral-dark;
+      align-self: center;
+    }
+
+    .description {
+      display: block;
+      width: 85%;
+      text-align: center;
+      font-size: 1.6rem;
+      color: $color-neutral-desaturated;
+      align-self: center;
+      margin-top: 1.3rem;
+    }
+
+    .plan {
+      background-color: $color-neutral-pale;
+      border-radius: 1rem;
+      padding: 2rem;
+      font-size: 1.6rem;
+      margin-top: 2rem;
+
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      &--price {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          color: $color-neutral-dark;
+          font-size: 1.6rem;
+        }
+
+        p {
+          color: $color-neutral-desaturated;
+        }
+      }
+
+      .change:link {
+        font-size: 1.4rem;
+        display: block;
+        margin-left: auto;
+        color: $color-primary-bright;
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+
+      .change:hover {
+        text-decoration: none;
+        color: $color-primary-dark;
+      }
+    }
+
+    &-button {
+      background-color: $color-primary-bright;
+      color: #fff;
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      border-radius: 1rem;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      box-shadow: 0 2rem 2rem rgba($color: $color-primary-bright, $alpha: 0.2);
+      transition: background-color 0.3s;
+    }
+
+    &-button:hover {
+      background-color: $color-primary-dark;
+    }
+
+    .cancel-button:link {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: $color-neutral-desaturated;
+      margin-top: 3.5rem;
+      align-self: center;
+      transition: color 0.3s;
+    }
+
+    .cancel-button:hover {
+      color: $color-neutral-dark;
+    }
+  }
+}
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  &-paragraph {
+    font-size: 1.2rem;
+    color: $color-neutral-dark;
+    letter-spacing: 0.5px;
+  }
+
+  &__challenge-link,
+  &__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-neutral-dark;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}

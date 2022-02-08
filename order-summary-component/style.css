@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/********************/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.container {
+  width: 144rem;
+  height: 84rem;
+  background-color: #e0e8ff;
+  margin-top: 5rem;
+  background-image: url(./img/pattern-background-desktop.svg);
+  background-size: 144rem;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.card {
+  width: 45rem;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3rem 3rem rgba(114, 128, 167, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .card__details {
+    width: 80%;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column; }
+    .card__details .name {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #1f2f56;
+      align-self: center; }
+    .card__details .description {
+      display: block;
+      width: 85%;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #7280a7;
+      align-self: center;
+      margin-top: 1.3rem; }
+    .card__details .plan {
+      background-color: #f5f7ff;
+      border-radius: 1rem;
+      padding: 2rem;
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem; }
+      .card__details .plan--price {
+        display: flex;
+        flex-direction: column; }
+        .card__details .plan--price h3 {
+          color: #1f2f56;
+          font-size: 1.6rem; }
+        .card__details .plan--price p {
+          color: #7280a7; }
+      .card__details .plan .change:link {
+        font-size: 1.4rem;
+        display: block;
+        margin-left: auto;
+        color: #3829e0;
+        font-weight: 700;
+        transition: color 0.3s; }
+      .card__details .plan .change:hover {
+        text-decoration: none;
+        color: #766cf1; }
+    .card__details-button {
+      background-color: #3829e0;
+      color: #fff;
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      border-radius: 1rem;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      box-shadow: 0 2rem 2rem rgba(56, 41, 224, 0.2);
+      transition: background-color 0.3s; }
+    .card__details-button:hover {
+      background-color: #766cf1; }
+    .card__details .cancel-button:link {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #7280a7;
+      margin-top: 3.5rem;
+      align-self: center;
+      transition: color 0.3s; }
+    .card__details .cancel-button:hover {
+      color: #1f2f56; }
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; }
+  .attribution-paragraph {
+    font-size: 1.2rem;
+    color: #1f2f56;
+    letter-spacing: 0.5px; }
+  .attribution__challenge-link, .attribution__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; }
+    .attribution__challenge-link::after, .attribution__coder-link::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #1f2f56;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .attribution__challenge-link:hover::after, .attribution__coder-link:hover::after {
+      transform: scaleX(1); }
