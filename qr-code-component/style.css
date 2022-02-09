@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/********************/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #d6e2f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.card {
+  width: 35rem;
+  background-color: #ffffff;
+  padding: 1.7rem 1.7rem 3.5rem 1.7rem;
+  margin-top: 20rem;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.08); }
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem; }
+  .container .qr-img {
+    width: 100%;
+    border-radius: 1rem; }
+  .container .description--container {
+    width: 87.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; }
+    .container .description--container .heading-1 {
+      font-size: 2.4rem;
+      line-height: 1.3;
+      color: #1f3251;
+      text-align: center; }
+    .container .description--container .description {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      letter-spacing: 0.3px;
+      color: #7b879d;
+      text-align: center; }
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem; }
+  .attribution-paragraph {
+    font-size: 1.2rem;
+    color: #1f3251;
+    letter-spacing: 0.5px; }
+  .attribution__challenge-link, .attribution__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; }
+    .attribution__challenge-link::after, .attribution__coder-link::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #1f3251;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .attribution__challenge-link:hover::after, .attribution__coder-link:hover::after {
+      transform: scaleX(1); }
