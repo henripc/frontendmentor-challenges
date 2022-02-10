@@ -1,0 +1,235 @@
+// COLORS
+$color-primary-blue: #8bacda;
+$color-primary-cyan: #00fff7;
+
+$color-white: #fff;
+$color-dark-blue-1: #0d192b;
+$color-dark-blue-2: #14253d;
+$color-dark-blue-3: #2f415b;
+
+// GENERAL SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/********************/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: $color-dark-blue-1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.card {
+  width: 35rem;
+  border-radius: 1.5rem;
+  margin: 10rem auto 0 auto;
+  background-color: $color-dark-blue-2;
+  box-shadow: 0 3rem 4rem rgba($color: #000, $alpha: 0.4);
+
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .img-container {
+      height: 30rem;
+      border-radius: 1rem;
+      position: relative;
+
+      .main-img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba($color: $color-primary-cyan, $alpha: 0.4);
+        border-radius: 1rem;
+        visibility: hidden;
+      }
+
+      &::before {
+        z-index: 10;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 4.8rem;
+        height: 4.8rem;
+        position: absolute;
+        background: url("./img/icon-view.svg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        visibility: hidden;
+      }
+
+      &:hover::after,
+      &:hover::before {
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: $color-white;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-primary-cyan;
+        cursor: pointer;
+      }
+    }
+
+    .description {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: $color-primary-blue;
+    }
+
+    .information-container {
+      margin-top: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        .price-tag {
+          font-size: 1.6rem;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          color: $color-primary-cyan;
+        }
+      }
+
+      .time-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+
+        .time-left {
+          font-size: 1.6rem;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          color: $color-primary-blue;
+        }
+      }
+    }
+
+    .profile {
+      margin-top: 2.3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+
+      .avatar {
+        width: 11%;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+      }
+
+      .profile-name {
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        color: $color-primary-blue;
+
+        em {
+          font-style: normal;
+          color: $color-white;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $color-primary-cyan;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -1.8rem;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: rgba($color: $color-dark-blue-3, $alpha: 1);
+      }
+    }
+  }
+}
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+
+  &-paragraph {
+    font-size: 1.2rem;
+    color: $color-primary-blue;
+    letter-spacing: 0.5px;
+  }
+
+  &__challenge-link,
+  &__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-primary-blue;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}

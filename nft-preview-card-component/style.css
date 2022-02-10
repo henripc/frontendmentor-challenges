@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/********************/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #0d192b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem; }
+
+.card {
+  width: 35rem;
+  border-radius: 1.5rem;
+  margin: 10rem auto 0 auto;
+  background-color: #14253d;
+  box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.4); }
+  .card .container {
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem; }
+    .card .container .img-container {
+      height: 30rem;
+      border-radius: 1rem;
+      position: relative; }
+      .card .container .img-container .main-img {
+        width: 100%;
+        border-radius: 1rem; }
+      .card .container .img-container::after {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 255, 247, 0.4);
+        border-radius: 1rem;
+        visibility: hidden; }
+      .card .container .img-container::before {
+        z-index: 10;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 4.8rem;
+        height: 4.8rem;
+        position: absolute;
+        background: url("./img/icon-view.svg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        visibility: hidden; }
+      .card .container .img-container:hover::after, .card .container .img-container:hover::before {
+        visibility: visible;
+        cursor: pointer; }
+    .card .container .name {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: #fff;
+      transition: all 0.3s; }
+      .card .container .name:hover {
+        color: #00fff7;
+        cursor: pointer; }
+    .card .container .description {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: #8bacda; }
+    .card .container .information-container {
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .card .container .information-container .price-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; }
+        .card .container .information-container .price-container .price-tag {
+          font-size: 1.6rem;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          color: #00fff7; }
+      .card .container .information-container .time-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem; }
+        .card .container .information-container .time-container .time-left {
+          font-size: 1.6rem;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          color: #8bacda; }
+    .card .container .profile {
+      margin-top: 2.3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative; }
+      .card .container .profile .avatar {
+        width: 11%;
+        border: 1px solid #fff;
+        border-radius: 50%; }
+      .card .container .profile .profile-name {
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        color: #8bacda; }
+        .card .container .profile .profile-name em {
+          font-style: normal;
+          color: #fff;
+          transition: all 0.3s; }
+          .card .container .profile .profile-name em:hover {
+            color: #00fff7;
+            cursor: pointer; }
+      .card .container .profile::after {
+        content: "";
+        position: absolute;
+        top: -1.8rem;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #2f415b; }
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem; }
+  .attribution-paragraph {
+    font-size: 1.2rem;
+    color: #8bacda;
+    letter-spacing: 0.5px; }
+  .attribution__challenge-link, .attribution__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; }
+    .attribution__challenge-link::after, .attribution__coder-link::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #8bacda;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .attribution__challenge-link:hover::after, .attribution__coder-link:hover::after {
+      transform: scaleX(1); }
