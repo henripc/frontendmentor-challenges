@@ -1,0 +1,260 @@
+// COLORS
+$color-primary-dark-blue: #090b1a;
+$color-primary-desat-blue: #1b1938;
+$color-primary-violet: #aa5cdb;
+$color-primary-violet-dark: hsl(277, 92%, 34%);
+
+$color-white: #fff; // main heading
+$color-white-1: #ffffffbf; // main paragraph
+$color-white-2: #ffffff99; // stat headings
+
+// BREAKPOINTS
+$bp-large: 64em; // 1024px
+$bp-medium: 48em; // 768px
+$bp-small: 33.75em; // 540px
+$bp-smallest: 28.125em; // 450px
+
+// GENERAL SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/********************/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%; // 1rem = 10px
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  // font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: $color-primary-dark-blue;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+
+  @media only screen and (max-width: $bp-large) {
+    gap: 10rem;
+  }
+}
+
+.card {
+  width: 100rem;
+  height: 40rem;
+  margin: 20rem auto 0 auto;
+  border-radius: 1rem;
+  background-color: $color-primary-desat-blue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 50rem;
+    height: auto;
+    margin: 10rem auto 0 auto;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 45rem;
+    margin: 5rem auto 0 auto;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 38rem;
+  }
+
+  .info-container {
+    width: 50%;
+    height: 100%;
+    padding: 4rem 9rem 3rem 6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      padding: 0 8rem 5rem 8rem;
+      order: 1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 4rem 5rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 4rem 5rem 4rem;
+    }
+
+    .heading-1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: $color-white;
+      line-height: 1.2;
+      letter-spacing: 0.1px;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
+      }
+
+      em {
+        font-style: normal;
+        color: $color-primary-violet;
+      }
+    }
+
+    .description {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $color-white-1;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        width: 95%;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+        align-self: center;
+      }
+    }
+
+    .stats-container {
+      margin-top: 3rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .number-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+          align-items: center;
+        }
+
+        .heading-2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+          line-height: 1.4;
+          color: $color-white;
+        }
+
+        .desc {
+          font-family: "Lexend Deca", sans-serif;
+          font-size: 1.2rem;
+          letter-spacing: 0.7px;
+          color: $color-white-2;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .img-container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba($color: $color-primary-violet-dark, $alpha: 0.5);
+      border-radius: 0 1rem 1rem 0;
+
+      @media only screen and (max-width: $bp-large) {
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+
+    .img-header {
+      width: 100%;
+      height: 100%;
+      border-radius: 0 1rem 1rem 0;
+      display: block;
+
+      @media only screen and (max-width: $bp-large) {
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+  }
+}
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+
+  &-paragraph {
+    font-size: 1.2rem;
+    color: $color-white;
+    letter-spacing: 0.5px;
+  }
+
+  &__challenge-link,
+  &__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-white;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
