@@ -1,0 +1,221 @@
+// COLORS
+$color-primary-orange: #e38826;
+$color-primary-cyan: #006970;
+$color-primary-cyan-dark: #004241;
+$color-primary-cyan-dark-2: #002221;
+
+$color-white-transparent: #ffffffbf; // paragraphs
+$color-gray-light: #f2f2f2; // background, headings, buttons
+
+// BREAKPOINTS
+$bp-medium: 48em; // 768px
+
+// GENERAL SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  // font-family: 'Big Shoulders Display', cursive;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+}
+
+.container {
+  width: 102rem;
+  margin: 20rem auto 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 35rem;
+    margin: 5rem auto 0 auto;
+
+    flex-direction: column;
+  }
+
+  &__card {
+    padding: 5rem 1rem 5rem 5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 0 5rem 5rem;
+    }
+
+    .icon {
+      width: 6.5rem;
+      display: block;
+    }
+
+    .heading-1 {
+      width: max-content;
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 3.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: $color-gray-light;
+    }
+
+    .description {
+      color: $color-white-transparent;
+      font-size: 1.5rem;
+      letter-spacing: 0.2px;
+    }
+
+    .p-1 {
+      width: 75%;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+      }
+    }
+
+    .p-2 {
+      width: 75%;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+      }
+    }
+
+    .p-3 {
+      width: 80%;
+    }
+
+    .btn {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      width: max-content;
+      padding: 1.5rem 3rem 1.5rem 3rem;
+      margin-top: 8rem;
+      border-radius: 50rem;
+      background-color: $color-gray-light;
+      cursor: pointer;
+      border: none;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+      }
+    }
+
+    .btn-1 {
+      color: $color-primary-orange;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .btn-1:hover {
+      background-color: $color-primary-orange;
+      color: $color-gray-light;
+      border: 2px solid $color-gray-light;
+    }
+
+    .btn-2 {
+      color: $color-primary-cyan;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .btn-2:hover {
+      background-color: $color-primary-cyan;
+      color: $color-gray-light;
+      border: 2px solid $color-gray-light;
+    }
+
+    .btn-3 {
+      color: $color-primary-cyan-dark;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .btn-3:hover {
+      background-color: $color-primary-cyan-dark;
+      color: $color-gray-light;
+      border: 2px solid $color-gray-light;
+    }
+  }
+
+  .card-1 {
+    background-color: $color-primary-orange;
+    border-radius: 1rem 0 0 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+
+  .card-2 {
+    background-color: $color-primary-cyan;
+  }
+
+  .card-3 {
+    background-color: $color-primary-cyan-dark;
+    border-radius: 0 1rem 1rem 0;
+
+    @media only screen and (max-width: $bp-medium) {
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+}
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+
+  &-paragraph {
+    font-size: 1.2rem;
+    color: $color-primary-cyan-dark-2;
+    letter-spacing: 0.5px;
+  }
+
+  &__challenge-link,
+  &__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-primary-cyan-dark-2;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}

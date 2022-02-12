@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem; }
+
+.container {
+  width: 102rem;
+  margin: 20rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 48em) {
+    .container {
+      width: 35rem;
+      margin: 5rem auto 0 auto;
+      flex-direction: column; } }
+  .container__card {
+    padding: 5rem 1rem 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    @media only screen and (max-width: 48em) {
+      .container__card {
+        padding: 5rem 0 5rem 5rem; } }
+    .container__card .icon {
+      width: 6.5rem;
+      display: block; }
+    .container__card .heading-1 {
+      width: max-content;
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 3.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #f2f2f2; }
+    .container__card .description {
+      color: #ffffffbf;
+      font-size: 1.5rem;
+      letter-spacing: 0.2px; }
+    .container__card .p-1 {
+      width: 75%; }
+      @media only screen and (max-width: 48em) {
+        .container__card .p-1 {
+          width: 80%; } }
+    .container__card .p-2 {
+      width: 75%; }
+      @media only screen and (max-width: 48em) {
+        .container__card .p-2 {
+          width: 80%; } }
+    .container__card .p-3 {
+      width: 80%; }
+    .container__card .btn {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      width: max-content;
+      padding: 1.5rem 3rem 1.5rem 3rem;
+      margin-top: 8rem;
+      border-radius: 50rem;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      border: none; }
+      @media only screen and (max-width: 48em) {
+        .container__card .btn {
+          margin-top: 2rem; } }
+    .container__card .btn-1 {
+      color: #e38826;
+      border: 2px solid transparent;
+      transition: all 0.3s; }
+    .container__card .btn-1:hover {
+      background-color: #e38826;
+      color: #f2f2f2;
+      border: 2px solid #f2f2f2; }
+    .container__card .btn-2 {
+      color: #006970;
+      border: 2px solid transparent;
+      transition: all 0.3s; }
+    .container__card .btn-2:hover {
+      background-color: #006970;
+      color: #f2f2f2;
+      border: 2px solid #f2f2f2; }
+    .container__card .btn-3 {
+      color: #004241;
+      border: 2px solid transparent;
+      transition: all 0.3s; }
+    .container__card .btn-3:hover {
+      background-color: #004241;
+      color: #f2f2f2;
+      border: 2px solid #f2f2f2; }
+  .container .card-1 {
+    background-color: #e38826;
+    border-radius: 1rem 0 0 1rem; }
+    @media only screen and (max-width: 48em) {
+      .container .card-1 {
+        border-radius: 1rem 1rem 0 0; } }
+  .container .card-2 {
+    background-color: #006970; }
+  .container .card-3 {
+    background-color: #004241;
+    border-radius: 0 1rem 1rem 0; }
+    @media only screen and (max-width: 48em) {
+      .container .card-3 {
+        border-radius: 0 0 1rem 1rem; } }
+
+.attribution {
+  width: 35rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem; }
+  .attribution-paragraph {
+    font-size: 1.2rem;
+    color: #002221;
+    letter-spacing: 0.5px; }
+  .attribution__challenge-link, .attribution__coder-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; }
+    .attribution__challenge-link::after, .attribution__coder-link::after {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #002221;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .attribution__challenge-link:hover::after, .attribution__coder-link:hover::after {
+      transform: scaleX(1); }
