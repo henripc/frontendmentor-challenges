@@ -37,6 +37,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  height: 100vh;
   background-image: url("./img/bg-desktop.svg"),
     linear-gradient(
       to top right,
@@ -46,8 +47,6 @@ body {
   background-size: cover, cover;
   background-repeat: no-repeat, repeat;
   background-position: center, center;
-  height: 100vh;
-  overflow: hidden;
 
   @media only screen and (max-width: $bp-medium-3) {
     background-image: url("./img/bg-mobile.svg"),
@@ -62,7 +61,6 @@ body {
     background-size: 100%, cover;
     background-repeat: no-repeat, repeat;
     background-position: right 0 top 0, center;
-    height: auto;
   }
 
   .header {

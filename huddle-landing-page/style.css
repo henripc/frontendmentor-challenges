@@ -16,12 +16,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  height: 100vh;
   background-image: url("./img/bg-desktop.svg"), linear-gradient(to top right, #674baf, #674baf);
   background-size: cover, cover;
   background-repeat: no-repeat, repeat;
-  background-position: center, center;
-  height: 100vh;
-  overflow: hidden; }
+  background-position: center, center; }
   @media only screen and (max-width: 50.625em) {
     body {
       background-image: url("./img/bg-mobile.svg"), linear-gradient(to top right, #674baf, #674baf); } }
@@ -29,8 +28,7 @@ body {
     body {
       background-size: 100%, cover;
       background-repeat: no-repeat, repeat;
-      background-position: right 0 top 0, center;
-      height: auto; } }
+      background-position: right 0 top 0, center; } }
   body .header {
     padding: 7rem 10rem 1rem 10rem; }
     @media only screen and (max-width: 85.375em) {
