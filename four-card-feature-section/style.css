@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 61.25em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: #fafafa; }
+  body .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 55em) {
+      body .container {
+        height: auto;
+        padding: 5rem 0; } }
+    body .container .section-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .container .section-container .header {
+        width: 60%;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        @media only screen and (max-width: 36.875em) {
+          body .container .section-container .header {
+            width: 70%; } }
+        @media only screen and (max-width: 23.4375em) {
+          body .container .section-container .header {
+            width: 80%; } }
+        body .container .section-container .header .heading-1 {
+          font-size: 3.2rem;
+          font-weight: 200;
+          color: #4c4e61; }
+          @media only screen and (max-width: 36.875em) {
+            body .container .section-container .header .heading-1 {
+              font-size: 2.8rem; } }
+          @media only screen and (max-width: 27.5em) {
+            body .container .section-container .header .heading-1 {
+              font-size: 2.4rem; } }
+        body .container .section-container .header .heading-2 {
+          font-size: 3.2rem;
+          font-weight: 600;
+          color: #4c4e61;
+          margin-bottom: 1.5rem; }
+          @media only screen and (max-width: 36.875em) {
+            body .container .section-container .header .heading-2 {
+              font-size: 2.8rem; } }
+          @media only screen and (max-width: 27.5em) {
+            body .container .section-container .header .heading-2 {
+              font-size: 2.4rem; } }
+        body .container .section-container .header .description {
+          width: 80%;
+          font-size: 1.3rem;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+          line-height: 1.6;
+          color: #a3a5ae;
+          text-align: center; }
+          @media only screen and (max-width: 27.5em) {
+            body .container .section-container .header .description {
+              width: 90%; } }
+      body .container .section-container .main-container {
+        display: flex;
+        gap: 2.5rem; }
+        @media only screen and (max-width: 55em) {
+          body .container .section-container .main-container {
+            flex-direction: column; } }
+        body .container .section-container .main-container .card {
+          width: 30rem;
+          height: 21rem;
+          padding: 2.5rem;
+          box-shadow: 0 1rem 1.5rem rgba(62, 117, 180, 0.2);
+          border-radius: 0.5rem;
+          border-top: 3px solid;
+          position: relative;
+          display: flex;
+          flex-direction: column; }
+          body .container .section-container .main-container .card--1 {
+            border-color: #45d3d3;
+            align-self: center; }
+          body .container .section-container .main-container .card--2 {
+            border-color: #ea5353; }
+          body .container .section-container .main-container .card--3 {
+            border-color: #fcaf4a; }
+          body .container .section-container .main-container .card--4 {
+            border-color: #549ef2;
+            align-self: center; }
+          body .container .section-container .main-container .card .heading-3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #4c4e61;
+            margin-bottom: 1rem; }
+          body .container .section-container .main-container .card .card-description {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #a3a5ae;
+            margin-bottom: 2.5rem;
+            line-height: 1.8; }
+          body .container .section-container .main-container .card .icon {
+            width: 5rem;
+            align-self: flex-end; }
+        body .container .section-container .main-container .middle-column {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem; }

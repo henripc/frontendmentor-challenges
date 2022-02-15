@@ -1,0 +1,185 @@
+// COLORS
+$color-primary-red: #ea5353;
+$color-primary-cyan: #45d3d3;
+$color-primary-orange: #fcaf4a;
+$color-primary-blue: #549ef2;
+$color-primary-dark-blue: #3e75b4;
+
+$color-neutral-dark-blue: #4c4e61;
+$color-neutral-gray-blue: #a3a5ae;
+$color-neutral-light-gray: #fafafa;
+
+// BREAKPOINTS
+$bp-medium: 61.25em; // 980px
+$bp-medium-2: 55em; // 880px
+$bp-small: 36.875em; // 590px
+$bp-smallest: 27.5em; // 440px
+$bp-smallest-2: 23.4375em; // 375px
+
+// GENERAL SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: $color-neutral-light-gray;
+
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-medium-2) {
+      height: auto;
+      padding: 5rem 0;
+    }
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .header {
+        width: 60%;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+          width: 70%;
+        }
+
+        @media only screen and (max-width: $bp-smallest-2) {
+          width: 80%;
+        }
+
+        .heading-1 {
+          font-size: 3.2rem;
+          font-weight: 200;
+          color: $color-neutral-dark-blue;
+
+          @media only screen and (max-width: $bp-small) {
+            font-size: 2.8rem;
+          }
+
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.4rem;
+          }
+        }
+
+        .heading-2 {
+          font-size: 3.2rem;
+          font-weight: 600;
+          color: $color-neutral-dark-blue;
+          margin-bottom: 1.5rem;
+
+          @media only screen and (max-width: $bp-small) {
+            font-size: 2.8rem;
+          }
+
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.4rem;
+          }
+        }
+
+        .description {
+          width: 80%;
+          font-size: 1.3rem;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+          line-height: 1.6;
+          color: $color-neutral-gray-blue;
+          text-align: center;
+
+          @media only screen and (max-width: $bp-smallest) {
+            width: 90%;
+          }
+        }
+      }
+
+      .main-container {
+        display: flex;
+        gap: 2.5rem;
+
+        @media only screen and (max-width: $bp-medium-2) {
+          flex-direction: column;
+        }
+
+        .card {
+          width: 30rem;
+          height: 21rem;
+          padding: 2.5rem;
+          box-shadow: 0 1rem 1.5rem
+            rgba($color: $color-primary-dark-blue, $alpha: 0.2);
+          border-radius: 0.5rem;
+          border-top: 3px solid;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          &--1 {
+            border-color: $color-primary-cyan;
+            align-self: center;
+          }
+
+          &--2 {
+            border-color: $color-primary-red;
+          }
+
+          &--3 {
+            border-color: $color-primary-orange;
+          }
+
+          &--4 {
+            border-color: $color-primary-blue;
+            align-self: center;
+          }
+
+          .heading-3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $color-neutral-dark-blue;
+            margin-bottom: 1rem;
+          }
+
+          .card-description {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $color-neutral-gray-blue;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+          }
+
+          .icon {
+            width: 5rem;
+            align-self: flex-end;
+          }
+        }
+
+        .middle-column {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+        }
+      }
+    }
+  }
+}
