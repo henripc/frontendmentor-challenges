@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 70em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6; }
+  body .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/bg-pattern-top-desktop.svg"), url("./img/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50%, cover; }
+    @media only screen and (max-width: 48em) {
+      body .container {
+        height: auto;
+        background-image: url("./img/bg-pattern-top-mobile.svg"), url("./img/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 80%, cover;
+        background-position: top left, bottom -40rem right; } }
+    @media only screen and (max-width: 33.75em) {
+      body .container {
+        background-position: top left, bottom -50rem right; } }
+    @media only screen and (max-width: 23.75em) {
+      body .container {
+        background-position: top 10rem left, bottom -70rem right; } }
+    body .container .main {
+      width: 120rem;
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (max-width: 80em) {
+        body .container .main {
+          width: 110rem; } }
+      @media only screen and (max-width: 64em) {
+        body .container .main {
+          width: 100rem; } }
+      @media only screen and (max-width: 57.5em) {
+        body .container .main {
+          width: 90rem; } }
+      @media only screen and (max-width: 51.875em) {
+        body .container .main {
+          width: 80rem; } }
+      @media only screen and (max-width: 48em) {
+        body .container .main {
+          width: 60rem;
+          padding: 5rem 0; } }
+      @media only screen and (max-width: 33.75em) {
+        body .container .main {
+          width: 42rem; } }
+      @media only screen and (max-width: 23.75em) {
+        body .container .main {
+          width: 35rem; } }
+      body .container .main .header {
+        margin-bottom: 8rem;
+        display: flex; }
+        @media only screen and (max-width: 48em) {
+          body .container .main .header {
+            margin-bottom: 5rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem; } }
+        body .container .main .header .heading-container {
+          width: 50%;
+          padding-right: 15rem; }
+          @media only screen and (max-width: 57.5em) {
+            body .container .main .header .heading-container {
+              width: 45%;
+              padding-right: 8rem; } }
+          @media only screen and (max-width: 51.875em) {
+            body .container .main .header .heading-container {
+              width: 50%;
+              padding-right: 4rem; } }
+          @media only screen and (max-width: 48em) {
+            body .container .main .header .heading-container {
+              width: 70%;
+              padding-right: 0; } }
+          @media only screen and (max-width: 33.75em) {
+            body .container .main .header .heading-container {
+              width: 75%; } }
+          @media only screen and (max-width: 23.75em) {
+            body .container .main .header .heading-container {
+              width: 90%; } }
+          body .container .main .header .heading-container .heading-1 {
+            white-space: pre;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 1.02;
+            letter-spacing: -3px;
+            color: #502050;
+            margin-bottom: 1rem; }
+            @media only screen and (max-width: 48em) {
+              body .container .main .header .heading-container .heading-1 {
+                text-align: center;
+                font-size: 4.6rem;
+                margin-bottom: 2rem; } }
+            @media only screen and (max-width: 33.75em) {
+              body .container .main .header .heading-container .heading-1 {
+                font-size: 3.6rem; } }
+          body .container .main .header .heading-container .description {
+            font-size: 1.4rem;
+            color: #937b92; }
+            @media only screen and (max-width: 48em) {
+              body .container .main .header .heading-container .description {
+                text-align: center; } }
+        body .container .main .header .rating-container {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem; }
+          @media only screen and (max-width: 57.5em) {
+            body .container .main .header .rating-container {
+              width: 55%; } }
+          @media only screen and (max-width: 51.875em) {
+            body .container .main .header .rating-container {
+              width: 50%; } }
+          @media only screen and (max-width: 48em) {
+            body .container .main .header .rating-container {
+              width: 100%; } }
+          body .container .main .header .rating-container .individual-rating {
+            width: 80%;
+            border-radius: 0.8rem;
+            background-color: #f7f2f7;
+            padding: 1.8rem 0 1.8rem 3rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem; }
+            @media only screen and (max-width: 57.5em) {
+              body .container .main .header .rating-container .individual-rating {
+                padding: 1.8rem 0 1.8rem 3rem;
+                gap: 2rem; } }
+            @media only screen and (max-width: 51.875em) {
+              body .container .main .header .rating-container .individual-rating {
+                padding: 1.8rem 0 1.8rem 2rem;
+                gap: 2rem; } }
+            @media only screen and (max-width: 48em) {
+              body .container .main .header .rating-container .individual-rating {
+                padding: 1.8rem 0 1.8rem 5rem; } }
+            @media only screen and (max-width: 33.75em) {
+              body .container .main .header .rating-container .individual-rating {
+                padding: 1.5rem 0;
+                flex-direction: column;
+                gap: 1.5rem; } }
+            @media only screen and (max-width: 23.75em) {
+              body .container .main .header .rating-container .individual-rating {
+                width: 90%; } }
+            body .container .main .header .rating-container .individual-rating .star-container {
+              display: flex;
+              align-items: center;
+              gap: 0.7rem; }
+            body .container .main .header .rating-container .individual-rating .review {
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: #502050; }
+          body .container .main .header .rating-container .rating-1 {
+            align-self: flex-start; }
+            @media only screen and (max-width: 48em) {
+              body .container .main .header .rating-container .rating-1 {
+                align-self: center; } }
+          body .container .main .header .rating-container .rating-2 {
+            align-self: center; }
+          body .container .main .header .rating-container .rating-3 {
+            align-self: flex-end; }
+            @media only screen and (max-width: 48em) {
+              body .container .main .header .rating-container .rating-3 {
+                align-self: center; } }
+      body .container .main .testimonial-container {
+        height: 28rem;
+        display: flex;
+        gap: 3rem; }
+        @media only screen and (max-width: 70em) {
+          body .container .main .testimonial-container {
+            gap: 2rem; } }
+        @media only screen and (max-width: 51.875em) {
+          body .container .main .testimonial-container {
+            height: 30rem; } }
+        @media only screen and (max-width: 48em) {
+          body .container .main .testimonial-container {
+            height: auto;
+            flex-direction: column; } }
+        body .container .main .testimonial-container .testimonial-card {
+          width: 38rem;
+          height: 24rem;
+          border-radius: 0.8rem;
+          color: #ffffff;
+          background-color: #502050;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          @media only screen and (max-width: 51.875em) {
+            body .container .main .testimonial-container .testimonial-card {
+              height: 26rem; } }
+          @media only screen and (max-width: 33.75em) {
+            body .container .main .testimonial-container .testimonial-card {
+              width: 80%; } }
+          @media only screen and (max-width: 23.75em) {
+            body .container .main .testimonial-container .testimonial-card {
+              width: 90%; } }
+          body .container .main .testimonial-container .testimonial-card .testimonial-wrapper {
+            width: 77%; }
+            @media only screen and (max-width: 33.75em) {
+              body .container .main .testimonial-container .testimonial-card .testimonial-wrapper {
+                width: 80%; } }
+            body .container .main .testimonial-container .testimonial-card .testimonial-wrapper .profile-container {
+              margin-bottom: 3rem;
+              display: flex;
+              align-items: center;
+              gap: 2rem; }
+              body .container .main .testimonial-container .testimonial-card .testimonial-wrapper .profile-container .profile-img {
+                width: 15%;
+                border-radius: 50%; }
+              body .container .main .testimonial-container .testimonial-card .testimonial-wrapper .profile-container .profile-info-container .profile-name {
+                font-size: 1.4rem;
+                font-weight: 500; }
+              body .container .main .testimonial-container .testimonial-card .testimonial-wrapper .profile-container .profile-info-container .profile-verified {
+                font-size: 1.4rem;
+                color: #ee68a4; }
+            body .container .main .testimonial-container .testimonial-card .testimonial-wrapper .testimonial {
+              font-size: 1.3rem;
+              line-height: 1.7; }
+        body .container .main .testimonial-container .card-1 {
+          align-self: flex-start; }
+          @media only screen and (max-width: 48em) {
+            body .container .main .testimonial-container .card-1 {
+              align-self: center; } }
+        body .container .main .testimonial-container .card-2 {
+          align-self: center; }
+        body .container .main .testimonial-container .card-3 {
+          align-self: flex-end; }
+          @media only screen and (max-width: 48em) {
+            body .container .main .testimonial-container .card-3 {
+              align-self: center; } }
