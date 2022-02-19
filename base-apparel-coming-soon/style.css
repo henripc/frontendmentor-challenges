@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow: hidden; }
+  body .main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./img/bg-pattern-desktop.svg"), linear-gradient(135deg, white, #fff5f5);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 70%, cover;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: min-content min-content auto; }
+    body .main .nav {
+      padding: 0 23rem 0 16.5rem;
+      margin-top: 6.5rem; }
+    body .main .heading-container {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+      padding: 0 23rem 0 16.5rem; }
+      body .main .heading-container .heading-1 {
+        font-size: 6.8rem;
+        font-weight: 600;
+        color: #413a3a;
+        text-transform: uppercase;
+        letter-spacing: 1.4rem;
+        line-height: 1;
+        margin: 4rem 0 2.8rem 0; }
+        body .main .heading-container .heading-1 span {
+          font-weight: 300;
+          letter-spacing: 1.6rem;
+          color: #ce9797; }
+      body .main .heading-container .description {
+        color: #ce9797;
+        line-height: 1.7;
+        margin-bottom: 3rem; }
+      body .main .heading-container .form {
+        display: flex;
+        position: relative; }
+        body .main .heading-container .form .email {
+          width: 100%;
+          font-family: inherit;
+          font-size: inherit;
+          color: #413a3a;
+          padding: 2rem 15rem 2rem 3rem;
+          border-radius: 4rem;
+          border: 1px solid rgba(206, 151, 151, 0.6);
+          background: transparent; }
+          body .main .heading-container .form .email::placeholder {
+            font-size: 1.6rem;
+            text-align: justify;
+            color: rgba(206, 151, 151, 0.6); }
+          body .main .heading-container .form .email:focus {
+            outline: none; }
+            body .main .heading-container .form .email:focus:invalid {
+              border: 1px solid #f96262; }
+          body .main .heading-container .form .email:not(:focus) {
+            outline: none; }
+        body .main .heading-container .form::after {
+          content: "";
+          position: absolute;
+          bottom: 1.5rem;
+          right: 12rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          background-image: url("./img/icon-error.svg");
+          visibility: hidden; }
+        body .main .heading-container .form .btn {
+          position: absolute;
+          bottom: 0;
+          right: -3px;
+          border: none;
+          padding: 1.8rem 4.5rem 1.8rem 4.5rem;
+          border-radius: 4rem;
+          box-shadow: 0 1rem 3rem rgba(249, 98, 98, 0.4);
+          background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          cursor: pointer; }
+        body .main .heading-container .form .btn:hover {
+          transform: scale(1.05);
+          box-shadow: 0 1rem 2rem rgba(155, 60, 60, 0.4);
+          background: #f8bfbf; }
+    body .main .img-container {
+      grid-column: 2;
+      grid-row: 1 / span 3; }
+      body .main .img-container .hero-img {
+        display: block; }
