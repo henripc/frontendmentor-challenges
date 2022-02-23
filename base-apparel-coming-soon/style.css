@@ -175,24 +175,45 @@ body {
           bottom: 0;
           right: -3px;
           border: none;
-          padding: 1.8rem 4.5rem 1.8rem 4.5rem;
+          padding: 2.9rem 5rem 2.9rem 5rem;
           border-radius: 4rem;
           box-shadow: 0 1rem 3rem rgba(249, 98, 98, 0.4);
-          background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          background: url("./img/icon-arrow.svg"), linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          background-repeat: no-repeat, no-repeat;
+          background-size: 12%, cover;
+          background-position: center, center;
+          content-visibility: hidden;
           cursor: pointer;
           transition: transform 0.3s; }
           @media only screen and (max-width: 64em) {
             body .main .heading-container .form .btn {
-              padding: 1.6rem 4.2rem 1.7rem 4.2rem; } }
+              padding: 2.9rem 5rem 3rem 5rem; } }
+          @media only screen and (max-width: 61.875em) {
+            body .main .heading-container .form .btn {
+              padding: 2.9rem 5rem 3rem 5rem;
+              bottom: -0.1rem; } }
           @media only screen and (max-width: 33.75em) {
             body .main .heading-container .form .btn {
-              padding: 1.6rem 3.5rem 1.7rem 3.5rem; } }
-          body .main .heading-container .form .btn span {
-            display: none; }
+              padding: 2.9rem 4rem 3rem 4rem;
+              bottom: 0;
+              background-size: 15%, cover; } }
+          @media only screen and (max-width: 27.5em) {
+            body .main .heading-container .form .btn {
+              padding: 2.9rem 4rem 3rem 4rem;
+              bottom: -0.1rem; } }
+          @media only screen and (max-width: 26.0625em) {
+            body .main .heading-container .form .btn {
+              bottom: 0; } }
         body .main .heading-container .form .btn:hover {
           transform: scale(1.05);
           box-shadow: 0 1rem 2rem rgba(155, 60, 60, 0.4);
-          background: #f8bfbf; }
+          background: url("./img/icon-arrow.svg"), #f8bfbf;
+          background-repeat: no-repeat, no-repeat;
+          background-size: 12%, cover;
+          background-position: center, center; }
+          @media only screen and (max-width: 33.75em) {
+            body .main .heading-container .form .btn:hover {
+              background-size: 15%, cover; } }
       body .main .heading-container .invalid-phrase {
         margin-left: 3rem;
         font-size: 1.4rem;

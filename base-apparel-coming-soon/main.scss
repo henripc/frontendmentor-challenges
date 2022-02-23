@@ -18,6 +18,7 @@ $bp-medium-3: 55.625em; // 890px
 $bp-small-1: 44.375em; // 710px
 $bp-small-2: 33.75em; // 540px
 $bp-smallest: 27.5em; // 440px
+$bp-smallest-2: 26.0625em; // 417px
 
 // GENERAL SETTINGS
 *,
@@ -255,31 +256,55 @@ body {
           bottom: 0;
           right: -3px;
           border: none;
-          padding: 1.8rem 4.5rem 1.8rem 4.5rem;
+          padding: 2.9rem 5rem 2.9rem 5rem;
           border-radius: 4rem;
           box-shadow: 0 1rem 3rem
             rgba($color: $color-primary-soft-red, $alpha: 0.4);
-          background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          background: url("./img/icon-arrow.svg"),
+            linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          background-repeat: no-repeat, no-repeat;
+          background-size: 12%, cover;
+          background-position: center, center;
+          content-visibility: hidden;
           cursor: pointer;
           transition: transform 0.3s;
 
           @media only screen and (max-width: $bp-medium) {
-            padding: 1.6rem 4.2rem 1.7rem 4.2rem;
+            padding: 2.9rem 5rem 3rem 5rem;
+          }
+
+          @media only screen and (max-width: $bp-medium-2) {
+            padding: 2.9rem 5rem 3rem 5rem;
+            bottom: -0.1rem;
           }
 
           @media only screen and (max-width: $bp-small-2) {
-            padding: 1.6rem 3.5rem 1.7rem 3.5rem;
+            padding: 2.9rem 4rem 3rem 4rem;
+            bottom: 0;
+            background-size: 15%, cover;
           }
 
-          span {
-            display: none;
+          @media only screen and (max-width: $bp-smallest) {
+            padding: 2.9rem 4rem 3rem 4rem;
+            bottom: -0.1rem;
+          }
+
+          @media only screen and (max-width: $bp-smallest-2) {
+            bottom: 0;
           }
         }
 
         .btn:hover {
           transform: scale(1.05);
           box-shadow: 0 1rem 2rem rgba($color: #9b3c3c, $alpha: 0.4);
-          background: rgba(#f8bfbf, $alpha: 1);
+          background: url("./img/icon-arrow.svg"), rgba(#f8bfbf, $alpha: 1);
+          background-repeat: no-repeat, no-repeat;
+          background-size: 12%, cover;
+          background-position: center, center;
+
+          @media only screen and (max-width: $bp-small-2) {
+            background-size: 15%, cover;
+          }
         }
       }
 
