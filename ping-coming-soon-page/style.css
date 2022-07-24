@@ -65,6 +65,7 @@ body {
 
 .heading-1 strong {
   color: var(--neutral-dark-blue);
+  font-weight: 700;
 }
 
 .description {
@@ -113,6 +114,7 @@ body {
   color: #fff;
   font-size: 1.6rem;
   font-family: inherit;
+  font-weight: 600;
   background-color: var(--primary-blue);
   padding: 1.7rem 7rem;
   border-radius: 3rem;
