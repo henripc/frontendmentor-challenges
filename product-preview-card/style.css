@@ -29,7 +29,7 @@ body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   font-size: 1.4rem;
-  background-color: var(--primary-cream)
+  background-color: var(--primary-cream);
 }
 
 /* MAIN */
@@ -37,8 +37,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  margin: 20rem auto 20rem auto;
 }
 
 /* CONTAINER */
@@ -174,6 +173,10 @@ body {
 
 /* MEDIAS */
 @media screen and (max-width: 640px) {
+  .main {
+    margin: 5rem auto 10rem auto;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -184,7 +187,8 @@ body {
 
   /* CONTAINER IMAGE */
   .container-img {
-    background-size: 100% 540px;
+    background-image: url('./img/image-product-mobile.jpg');
+    background-size: cover;
     height: 40%;
     width: 100%;
     border-radius: 1rem 1rem 0 0;
