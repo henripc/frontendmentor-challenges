@@ -121,14 +121,11 @@ body {
   height: 5rem;
   border-radius: 1rem;
   cursor: pointer;
+  letter-spacing: 0.4px;
 }
 
 .btn:hover {
   background-color: var(--secondary-dark-cyan);
-}
-
-.add-cart {
-  letter-spacing: 0.4px;
 }
 
 /* ATTRIBUTION */
@@ -187,7 +184,7 @@ body {
 
   /* CONTAINER IMAGE */
   .container-img {
-    background-image: url('./img/image-product-mobile.jpg');
+    background-image: url("./img/image-product-mobile.jpg");
     background-size: cover;
     height: 40%;
     width: 100%;
