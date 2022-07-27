@@ -1,4 +1,4 @@
-# Frontendmentor - Ping Coming Soon Page
+# Frontendmentor - Component with Signup Form
 
 My solution for this challenge.
 
