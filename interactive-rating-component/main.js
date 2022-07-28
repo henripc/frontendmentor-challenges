@@ -4,22 +4,26 @@ const cardFront = document.querySelector('.card-front');
 const cardBack = document.querySelector('.card-back');
 const ratingSelected = document.querySelector('.rating-selected');
 
-let selectedRating = 0;
+const ratingArray = [];
 
 ratings.forEach(rating => {
   rating.addEventListener('click', () => {
-    rating.classList.toggle('selected');
-    selectedRating = rating.classList.value.split(' ')[1];
+    const numberChosen = rating.classList.value.split(' ')[1];
+    if (rating.classList.toggle('selected')) {
+      ratingArray.push(numberChosen);
+    } else {
+      const index = ratingArray.indexOf(numberChosen);
+      ratingArray.splice(index, 1);
+    }
   });
 });
 
 btn.addEventListener('click', () => {
-  if (selectedRating === 0) {
+  if (ratingArray.length !== 1) {
     return;
   } else {
     cardFront.classList.add('submit');
     cardBack.classList.add('show');
-    ratingSelected.firstElementChild.textContent = selectedRating;
+    ratingSelected.firstElementChild.textContent = ratingArray[0];
   }
 });
-
