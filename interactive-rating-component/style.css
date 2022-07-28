@@ -1,0 +1,286 @@
+/* TYPOGRAPHY */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* COLORS */
+:root {
+  --primary-orange: #fb7413;
+  --white: #fff;
+  --neutral-light-grey: #959eac;
+  --neutral-medium-grey: #7c8798;
+  --neutral-dark-blue: #252d37;
+  --neutral-very-dark-blue: #121417;
+}
+
+/* GENERAL SETTINGS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--neutral-very-dark-blue);
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rem;
+  position: relative;
+}
+
+/* FIRST CARD */
+.card-front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40rem;
+  height: 42rem;
+  /* background-color: var(--neutral-dark-blue); */
+  background: linear-gradient(
+    to top,
+    rgba(37, 45, 55, 0.4),
+    rgb(37, 45, 55, 0.9)
+  );
+  padding: 3rem;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  transform-origin: center;
+  transition: transform 2s ease;
+}
+
+.card-front.submit {
+  transform: translate(-50%, -50%) rotateY(-180deg);
+}
+
+.container-icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(124, 135, 152, 0.15);
+  border-radius: 50%;
+  margin-bottom: 4rem;
+}
+
+.heading-1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--neutral-medium-grey);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.container-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.rating {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: rgba(124, 135, 152, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--neutral-medium-grey);
+  transition: all 0.3s ease;
+}
+
+.rating.selected {
+  background-color: var(--neutral-light-grey);
+  color: var(--white);
+}
+
+.rating:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.rating span {
+  height: 1.5rem;
+}
+
+.btn {
+  width: 100%;
+  border-style: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: var(--primary-orange);
+  padding: 1.4rem 0;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+
+/* SECOND CARD */
+.card-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 42rem;
+  background: linear-gradient(
+    to top,
+    rgba(37, 45, 55, 0.4),
+    rgba(37, 45, 55, 0.9)
+  );
+  padding: 4rem 3rem 3rem 3rem;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  transform-origin: center;
+  transition: transform 2s ease;
+}
+
+.card-back.show {
+  transform: translate(-50%, -50%) rotateY(0);
+}
+
+.container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.container-selected {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: rgba(124, 135, 152, 0.15);
+  color: rgb(253, 141, 61);
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.rating-selected {
+  height: 1.5rem;
+  letter-spacing: 0.4px;
+}
+
+.description.back {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* ATTRIBUTION */
+.attribution {
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto 0 auto;
+}
+
+.attribution-paragraph {
+  font-size: 1.2rem;
+  color: var(--neutral-light-grey);
+  letter-spacing: 0.5px;
+}
+
+.attribution__challenge-link,
+.attribution__coder-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.attribution__challenge-link::after,
+.attribution__coder-link::after {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--neutral-light-grey);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.attribution__challenge-link:hover::after,
+.attribution__coder-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 420px) {
+  /* CARD FRONT */
+  .card-front {
+    width: 35rem;
+    height: 38rem;
+    padding: 2rem 2.5rem 3rem 2.5rem;
+  }
+
+  .container-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .heading-1 {
+    font-size: 2.6rem;
+  }
+
+  .rating {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .card-back {
+    width: 35rem;
+    height: 38rem;
+    padding: 2rem 2.5rem 3rem 2.5rem;
+  }
+
+  /* CARD BACK */
+  .container-img {
+    margin-bottom: 2.5rem;
+  }
+
+  .container-selected {
+    margin-bottom: 2.5rem;
+  }
+}
